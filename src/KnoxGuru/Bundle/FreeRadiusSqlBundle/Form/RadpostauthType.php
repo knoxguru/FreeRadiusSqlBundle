@@ -18,7 +18,9 @@ class RadpostauthType extends AbstractType
             ->add('username')
             ->add('pass')
             ->add('reply')
-            ->add('authdate')
+            ->add('authdate', 'datetime', [
+	    	'data' => new \DateTime(),
+	    ])
         ;
     }
     

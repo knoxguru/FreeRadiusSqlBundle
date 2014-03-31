@@ -19,28 +19,28 @@ class Radgroupreply
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="attribute", type="string", length=64, nullable=false)
      */
-    public $attribute = '';
+    protected $attribute = '';
 
     /**
      * @var string
      *
      * @ORM\Column(name="op", type="string", length=2, nullable=false)
      */
-    public $op = '=';
+    protected $op = '=';
 
     /**
      * @var string
      *
      * @ORM\Column(name="value", type="string", length=253, nullable=false)
      */
-    public $value = '';
+    protected $value = '';
 
     /**
      * @var \Radgroupcheck
@@ -50,7 +50,7 @@ class Radgroupreply
      *   @ORM\JoinColumn(name="groupname", referencedColumnName="groupname")
      * })
      */
-    public $groupname;
+    protected $groupname;
 
 
 
@@ -154,5 +154,9 @@ class Radgroupreply
     public function getGroupname()
     {
         return $this->groupname;
+    }
+
+    public function __toString() {
+	return (string) $this->groupname;
     }
 }

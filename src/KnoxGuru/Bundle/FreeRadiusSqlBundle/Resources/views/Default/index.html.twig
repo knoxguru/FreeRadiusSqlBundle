@@ -1,6 +1,17 @@
-<a href="check">radcheck</a><br>
-<a href="group">radgroup</a><br>
-<a href="groupreply">radgroupreply</a><br>
-<a href="postauth">radpostauth</a><br>
-<a href="reply">radreply</a><br>
-<a href="usergroup">radusergroup</a><br>
+{% extends 'KnoxGuruFreeRadiusSqlBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Free Radius Admin </h1>
+
+
+    <ul style="list-style-type:none">
+        <li><strong>Edit:</strong></li>
+	<li><a href="check">radcheck</a></li>
+	<li><a href="group">radgroup</a></li>
+	<li><a href="groupreply">radgroupreply</a></li>
+	<li><a href="postauth">radpostauth</a></li>
+	<li><a href="reply">radreply</a></li>
+	<li><a href="usergroup">radusergroup</a></li>
+    </ul>
+{% endblock %}
+

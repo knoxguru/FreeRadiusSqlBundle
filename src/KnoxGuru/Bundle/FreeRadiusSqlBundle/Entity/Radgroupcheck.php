@@ -19,37 +19,40 @@ class Radgroupcheck
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="groupname", type="string", length=64, nullable=false)
+     * @ORM\OneToMany(targetEntity="KnoxGuru\Bundle\FreeRadiusSqlBundle\Entity\Radgroupreply", mappedBy="groupname", cascade={"ALL"}, indexBy="groupname")
      */
-    public $groupname = '';
+    protected $groupname = '';
 
     /**
      * @var string
      *
      * @ORM\Column(name="attribute", type="string", length=64, nullable=false)
      */
-    public $attribute = '';
+    protected $attribute = '';
 
     /**
      * @var string
      *
      * @ORM\Column(name="op", type="string", length=2, nullable=false, columnDefinition="enum(':=')")
      */
-    public $op = ':=';
+    protected $op = ':=';
 
     /**
      * @var string
      *
      * @ORM\Column(name="value", type="string", length=253, nullable=false)
      */
-    public $value = '';
+    protected $value = '';
 
-
+    public function __toString() {
+	return (string) $this->groupname;
+    }
 
     /**
      * Get id
@@ -67,7 +70,7 @@ class Radgroupcheck
      * @param string $groupname
      * @return Radgroupcheck
      */
-    public function setGroupname($groupname)
+    public function setGroupname(KnoxGuru\Bundle\FreeRadiusSqlBundle\Entity\Radgroupreply $groupname)
     {
         $this->groupname = $groupname;
 
@@ -152,4 +155,5 @@ class Radgroupcheck
     {
         return $this->value;
     }
-}
+
+} 

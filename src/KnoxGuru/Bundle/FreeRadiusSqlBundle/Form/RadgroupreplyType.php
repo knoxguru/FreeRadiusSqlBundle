@@ -16,6 +16,7 @@ class RadgroupreplyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+	    ->add('groupname')
             ->add('attribute', 'choice', array(
                 'choices' => Attributes::get(),     
                 'required' => true,
@@ -26,12 +27,11 @@ class RadgroupreplyType extends AbstractType
             ->add('op', 'choice', array(
                 'choices' => Attributes::getOpReply(),
                 'required' => true,
-                'empty_value' => ':=',
+                'empty_value' => '',
                 'empty_data' => null,
 		'multiple'  => false,
             ))
-            ->add('value')
-            ->add('groupname')
+            ->add('value') 
         ;
     }
     
