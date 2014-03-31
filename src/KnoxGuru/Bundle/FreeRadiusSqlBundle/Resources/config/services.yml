@@ -1,0 +1,7 @@
+parameters:
+#    knox_guru_free_radius_sql.example.class: KnoxGuru\Bundle\FreeRadiusSqlBundle\Example
+
+services:
+#    knox_guru_free_radius_sql.example:
+#        class: %knox_guru_free_radius_sql.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

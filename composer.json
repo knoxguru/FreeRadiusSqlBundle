@@ -1,0 +1,21 @@
+{
+    "name": "knoxguru/freeradiusbundle",
+    "type": "symfony-bundle",
+    "description": "",
+    "keywords": ["freeradius", "radius", "mysql", "postgresql"],
+    "homepage": "http://github.com/knoxguru",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "authors": [
+        {
+            "name": "KnoxGuru",
+            "homepage": "http://github.com/knoxguru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2"
+    }
+}
