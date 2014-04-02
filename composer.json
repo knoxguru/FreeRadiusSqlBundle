@@ -6,8 +6,9 @@
     "homepage": "http://github.com/knoxguru",
     "license": "MIT",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "KnoxGuru\\Bundle\\FreeRadiusSqlBundle": "" }
     },
+    "target-dir": "KnoxGuru/Bundle/FreeRadiusSqlBundle",
     "authors": [
         {
             "name": "KnoxGuru",
